@@ -13,3 +13,13 @@ It's a revival of an old college project, when I wrote a simple mail client
 style feed reader in Visual Basic, which I called 'Mocha' at the time. That
 code is long gone, but I've kept meaning to do something similar again, though
 I never really persisted with the projects beyond the initial stab.
+
+## Build prerequisites
+
+Go, obviously.
+
+Also, you'll need [pkger][] for rebuilding any static assets. Install it with:
+
+    go get github.com/markbates/pkger/cmd/pkger
+
+[pkger]: https://github.com/markbates/pkger

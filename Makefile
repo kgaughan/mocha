@@ -1,8 +1,8 @@
 VERSION:=0.1.0
 
-SOURCE:=$(wildcard *.go)
+SOURCE:=$(wildcard *.go) pkged.go
 
-build: go.mod mocha
+build: go.mod pkged.go mocha
 
 tidy: go.mod
 
@@ -14,6 +14,9 @@ mocha: $(SOURCE)
 
 go.mod: $(SOURCE)
 	go mod tidy
+
+pkged.go:
+	pkger
 
 .DEFAULT: build
 
