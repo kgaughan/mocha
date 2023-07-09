@@ -29,16 +29,16 @@ CREATE TABLE entries (
     summary       TEXT,
     content       TEXT,
     author        TEXT,
-    published     TEXT NOT NULL, -- DATETIME, UTC
-    updated       TEXT NOT NULL, -- DATETIME, UTC
+    published_at  TEXT NOT NULL, -- DATETIME, UTC
+    updated_at    TEXT NOT NULL, -- DATETIME, UTC
 
     FOREIGN KEY (feed_id) REFERENCES feeds (id) ON DELETE CASCADE
 );
 
 CREATE TABLE categories (
-    id       INTEGER NOT NULL PRIMARY KEY,
-    user_id  INTEGER NOT NULL,
-    category TEXT NOT NULL,
+    id      INTEGER NOT NULL PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    title   TEXT NOT NULL,
 
     FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE
 );
@@ -67,7 +67,7 @@ CREATE TABLE links (
 CREATE TABLE entry_states (
     entry_id INTEGER NOT NULL,
     user_id  INTEGER NOT NULL,
-    is_read  BOOLEAN NOT NULL DEFAULT FALSE,
+    read_at  TEXT, -- DATETIME, UTC
 
     PRIMARY KEY (entry_id, user_id)
 ) WITHOUT ROWID;

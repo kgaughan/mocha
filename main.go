@@ -59,7 +59,7 @@ func main() {
 	if err != nil {
 		log.Fatal("gorm.Open:", err)
 	}
-	db.AutoMigrate(&models.Article{})
+	db.AutoMigrate(&models.Entry{})
 
 	r := chi.NewRouter()
 	r.Use(middleware.RequestID)
