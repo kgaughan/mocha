@@ -38,11 +38,10 @@ func init() {
 }
 
 func getConfigRoot() string {
-	if cfgRoot, ok := os.LookupEnv("XDG_CONFIG_HOME"); !ok {
-		return path.Join(os.Getenv("HOME"), ".config")
-	} else {
+	if cfgRoot, ok := os.LookupEnv("XDG_CONFIG_HOME"); ok {
 		return cfgRoot
 	}
+	return path.Join(os.Getenv("HOME"), ".config")
 }
 
 func main() {
