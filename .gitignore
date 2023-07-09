@@ -1,3 +1,4 @@
 /mocha
 .*.sw?
 *~
+/dist/
