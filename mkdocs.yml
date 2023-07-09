@@ -1,0 +1,10 @@
+---
+site_name: Mocha
+repo_url: https://github.com/kgaughan/mocha/
+
+markdown_extensions:
+  admonition: {}
+  attr_list: {}
+
+nav:
+  - index.md
