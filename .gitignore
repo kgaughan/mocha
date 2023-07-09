@@ -2,3 +2,6 @@
 .*.sw?
 *~
 /dist/
+/.vscode/
+*.sqlite
+*.db
