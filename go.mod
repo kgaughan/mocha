@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/glebarez/sqlite v1.9.0
-	github.com/go-chi/chi/v5 v5.0.10
+	github.com/go-chi/chi/v5 v5.0.11
 	github.com/spf13/pflag v1.0.5
 	gorm.io/gorm v1.25.5
 )
